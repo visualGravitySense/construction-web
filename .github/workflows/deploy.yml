@@ -27,22 +27,19 @@ jobs:
           node-version: "20"
           cache: "npm"
 
-      - name: Setup base path for GitHub Pages
-        id: base
-        run: |
-          if [ "${{ github.repository }}" = "${{ github.repository_owner }}.github.io" ]; then
-            echo "base=/" >> $GITHUB_OUTPUT
-          else
-            echo "base=/${{ github.event.repository.name }}/" >> $GITHUB_OUTPUT
-          fi
-
       - name: Install dependencies
         run: npm ci
 
+      # Base path обязателен для GitHub Pages: /construction-web/ (иначе JS/ссылки ломаются)
       - name: Build
-        env:
-          VITE_BASE: ${{ steps.base.outputs.base }}
-        run: npm run build
+        run: |
+          if [ "${{ github.repository }}" = "${{ github.repository_owner }}.github.io" ]; then
+            export VITE_BASE="/"
+          else
+            export VITE_BASE="/${{ github.event.repository.name }}/"
+          fi
+          echo "Building with VITE_BASE=$VITE_BASE"
+          npm run build
 
       # Деплой через ветку gh-pages (обходит лимиты API deploy-pages)
       - name: Deploy to GitHub Pages
