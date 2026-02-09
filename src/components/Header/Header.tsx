@@ -35,7 +35,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center group gap-2 lg:gap-3">
             <img 
-              src="/ecobeton-brand-1.svg" 
+              src={`${import.meta.env.BASE_URL}ecobeton-brand-1.svg`} 
               alt="EcoBeton Grupp OÜ Logo" 
               className="hidden h-8 w-auto lg:h-10 xl:h-12 transition-transform group-hover:scale-105"
               aria-hidden="true"
