@@ -4,6 +4,7 @@ import { MapPin, Calendar, ArrowRight, Sparkles, Award, TrendingUp, Phone, Messa
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { getPublicUrl } from "@/lib/utils"
 
 const projects = [
   {
@@ -416,7 +417,7 @@ const Projects = () => {
 
       {/* CTA Section - BJ Fogg Improvements */}
       <section className="py-16 bg-gradient-to-br from-blue-600 via-blue-700 to-purple-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/why-choose-us.jpg')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${getPublicUrl('why-choose-us.jpg')})` }}></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 via-blue-700/90 to-purple-600/90"></div>
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

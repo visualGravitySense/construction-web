@@ -8,31 +8,32 @@
  */
 
 import Icon3D from '../Icon3D/Icon3D';
+import { getPublicUrl } from "@/lib/utils"
 
 // Пример конфигурации со статичными 3D иконками
 const stats3D = [
   { 
     value: "12+", 
     label: "Aastat kogemust",
-    icon3D: "/3d-icons/trending-up-3d.png", // Путь к 3D иконке
+    icon3D: getPublicUrl("3d-icons/trending-up-3d.png"),
     iconColor: "bg-blue-500"
   },
   { 
     value: "100+", 
     label: "Edukalt projekti",
-    icon3D: "/3d-icons/check-circle-3d.png",
+    icon3D: getPublicUrl("3d-icons/check-circle-3d.png"),
     iconColor: "bg-green-500"
   },
   { 
     value: "100%", 
     label: "Klientide rahulolu",
-    icon3D: "/3d-icons/users-3d.png",
+    icon3D: getPublicUrl("3d-icons/users-3d.png"),
     iconColor: "bg-purple-500"
   },
   { 
     value: "2x", 
     label: "Aasta Betoonehitis",
-    icon3D: "/3d-icons/award-3d.png",
+    icon3D: getPublicUrl("3d-icons/award-3d.png"),
     iconColor: "bg-yellow-500"
   }
 ];

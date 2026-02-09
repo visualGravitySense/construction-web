@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Sparkles, Clock, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button"
+import { getPublicUrl } from "@/lib/utils"
 
 const ContactSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -75,7 +76,7 @@ const ContactSection = () => {
       {/* Фоновый паттерн */}
       <div className="absolute inset-0">
         <img 
-          src={`${import.meta.env.BASE_URL}pattern-1.jpg`} 
+          src={getPublicUrl('pattern-1.jpg')} 
           alt="Pattern background"
           className="w-full h-full object-cover"
         />

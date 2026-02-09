@@ -9,6 +9,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Award, TrendingUp, Users, CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button"
 import { Link } from 'react-router-dom';
+import { getPublicUrl } from "@/lib/utils"
 
 // Добавьте поле icon3D для каждого элемента
 const stats = [
@@ -16,16 +17,16 @@ const stats = [
     value: "12+", 
     label: "Aastat kogemust",
     icon: TrendingUp,
-    icon3D: "/3d-icons/trending-up-3d.png", // ← Добавьте путь к 3D иконке
+    icon3D: getPublicUrl("3d-icons/trending-up-3d.png"),
     iconColor: "bg-blue-500",
     description: "Pikaajaline kogemus",
-    use3D: true // ← Флаг для переключения между обычной и 3D иконкой
+    use3D: true
   },
   { 
     value: "100+", 
     label: "Edukalt projekti",
     icon: CheckCircle,
-    icon3D: "/3d-icons/check-circle-3d.png",
+    icon3D: getPublicUrl("3d-icons/check-circle-3d.png"),
     iconColor: "bg-green-500",
     description: "Edukalt lõpetatud",
     use3D: true
@@ -34,7 +35,7 @@ const stats = [
     value: "100%", 
     label: "Klientide rahulolu",
     icon: Users,
-    icon3D: "/3d-icons/users-3d.png",
+    icon3D: getPublicUrl("3d-icons/users-3d.png"),
     iconColor: "bg-purple-500",
     description: "Rahulolevad kliendid",
     use3D: true
@@ -43,7 +44,7 @@ const stats = [
     value: "2x", 
     label: "Aasta Betoonehitis",
     icon: Award,
-    icon3D: "/3d-icons/award-3d.png",
+    icon3D: getPublicUrl("3d-icons/award-3d.png"),
     iconColor: "bg-yellow-500",
     description: "Tunnustatud kvaliteet",
     use3D: true
