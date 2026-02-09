@@ -1,0 +1,16 @@
+:root {
+    /* Subtle shadows for cards */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.12);
+    
+    /* Green accent shadows */
+    --shadow-green-sm: 0 4px 16px rgba(124, 179, 66, 0.15);
+    --shadow-green-md: 0 8px 24px rgba(124, 179, 66, 0.25);
+    --shadow-green-lg: 0 12px 32px rgba(124, 179, 66, 0.35);
+    
+    /* Dark mode shadows */
+    --shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --shadow-dark-lg: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }

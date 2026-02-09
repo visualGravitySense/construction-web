@@ -1,0 +1,41 @@
+:root {
+    /* === CRITICAL: NEW BRAND COLORS === */
+    
+    /* Grays (from logo) */
+    --color-charcoal: #1a1a1a;
+    --color-dark-gray: #2a2a2a;
+    --color-medium-gray: #4a4a4a;
+    --color-light-gray: #666666;
+    --color-border-gray: #e0e0e0;
+    --color-bg-light: #f8f8f8;
+    
+    /* Accent Green (from logo) */
+    --color-green-primary: #7cb342;
+    --color-green-light: #9ccc65;
+    --color-green-hover: #6a9c35;
+    
+    /* Semantic */
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #666666;
+    --color-text-muted: #808080;
+    --color-text-on-dark: #ffffff;
+    --color-text-on-dark-muted: #c0c0c0;
+    
+    /* Backgrounds */
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f8f8f8;
+    --color-bg-dark: #1a1a1a;
+    --color-bg-dark-secondary: #2a2a2a;
+    
+    /* States */
+    --color-success: #7cb342;
+    --color-error: #ea4335;
+    --color-warning: #ff9800;
+    
+    /* === DEPRECATED COLORS (TO REMOVE) === */
+    /* DO NOT USE THESE: */
+    /* --color-blue: #4285F4; */
+    /* --color-red: #EA4335; */
+    /* --color-purple: #9C27B0; */
+    /* --color-yellow: #FFC107; */
+  }

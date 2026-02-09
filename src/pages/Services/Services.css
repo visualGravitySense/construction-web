@@ -1,0 +1,29 @@
+.services-page {
+  width: 100%;
+}
+
+/* Smooth scroll behavior for anchor links */
+.services-page [id] {
+  scroll-margin-top: 120px;
+}
+
+.services-page section[id] {
+  scroll-margin-top: 120px;
+}
+
+/* Animation for service cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-page .opacity-0 {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
