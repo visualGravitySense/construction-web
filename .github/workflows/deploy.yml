@@ -41,6 +41,10 @@ jobs:
           echo "Building with VITE_BASE=$VITE_BASE"
           npm run build
 
+      # Для SPA: при прямом заходе на /referentsid и т.д. GitHub Pages отдаёт 404.html → загружается тот же index.html
+      - name: Copy index to 404 for SPA routing
+        run: cp ./dist/index.html ./dist/404.html
+
       # Деплой через ветку gh-pages (обходит лимиты API deploy-pages)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
