@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronLeft, ChevronRight, CheckCircle, Zap, Award, Clock, Phone, Sparkles, TrendingUp, Shield, Star, Users, FileText, Calculator, Info, AlertCircle, X, Eye, Brain } from 'lucide-react';
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { getPublicUrl } from "@/lib/utils"
 import './Hero.css'
-
-const baseUrl = import.meta.env.BASE_URL;
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -37,19 +36,19 @@ const Hero = () => {
       welcomeText: "TERE TULEMAST ECOBETONI",
       heading: "EHITAME PAREMA TULEVIKU",
       description: "Anname endast iga päev maksimumi, püüeldes täiusliku tulemuse ja kõrge kvaliteedi poole, et ületada ka kõige nõudlikuma kliendi ootused.",
-      video: `${baseUrl}motion-4.mp4`
+      video: getPublicUrl('motion-4.mp4')
     },
     {
       welcomeText: "TERE TULEMAST ECOBETONI",
       heading: "EHITAME PAREMA TULEVIKU",
       description: "Anname endast iga päev maksimumi, püüeldes täiusliku tulemuse ja kõrge kvaliteedi poole, et ületada ka kõige nõudlikuma kliendi ootused.",
-      video: `${baseUrl}motion-2.mp4`
+      video: getPublicUrl('motion-2.mp4')
     },
     {
       welcomeText: "TERE TULEMAST ECOBETONI",
       heading: "EHITAME PAREMA TULEVIKU",
       description: "Anname endast iga päev maksimumi, püüeldes täiusliku tulemuse ja kõrge kvaliteedi poole, et ületada ka kõige nõudlikuma kliendi ootused.",
-      video: `${baseUrl}motion-3.mp4`
+      video: getPublicUrl('motion-3.mp4')
     }
   ];
 

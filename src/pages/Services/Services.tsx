@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { getPublicUrl } from "@/lib/utils"
 import './Services.css';
 
 const services = [
@@ -29,7 +30,7 @@ const services = [
     color: 'from-blue-500 to-blue-600',
     bgColor: 'bg-blue-50',
     borderColor: 'border-blue-200',
-    image: '/peatoovott-ja-projektijuhtimine.jpg'
+    image: getPublicUrl('peatoovott-ja-projektijuhtimine.jpg')
   },
   {
     id: 'ehitusalane-konsultatsioon',
@@ -53,7 +54,7 @@ const services = [
     color: 'from-yellow-500 to-yellow-600',
     bgColor: 'bg-yellow-50',
     borderColor: 'border-yellow-200',
-    image: '/ehitusalane-konsultatsioon.jpg'
+    image: getPublicUrl('ehitusalane-konsultatsioon.jpg')
   },
   {
     id: 'betoonitööd',
@@ -77,7 +78,7 @@ const services = [
     color: 'from-green-500 to-green-600',
     bgColor: 'bg-green-50',
     borderColor: 'border-green-200',
-    image: '/betooni-ja-montaazitood.jpg'
+    image: getPublicUrl('betooni-ja-montaazitood.jpg')
   },
   {
     id: 'betoonpõrandad',
@@ -101,7 +102,7 @@ const services = [
     color: 'from-purple-500 to-purple-600',
     bgColor: 'bg-purple-50',
     borderColor: 'border-purple-200',
-    image: '/betoonporandad.jpg'
+    image: getPublicUrl('betoonporandad.jpg')
   },
   {
     id: 'omanikujärelvalve',
@@ -125,7 +126,7 @@ const services = [
     color: 'from-indigo-500 to-indigo-600',
     bgColor: 'bg-indigo-50',
     borderColor: 'border-indigo-200',
-    image: '/omanikujarelvalve.jpg'
+    image: getPublicUrl('omanikujarelvalve.jpg')
   },
   {
     id: 'transporditeenus',
@@ -434,7 +435,7 @@ const Services = () => {
 
       {/* CTA Section - Minimalist Design */}
       <section className="py-16 bg-gradient-to-br from-blue-600 via-blue-700 to-purple-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/why-choose-us.jpg')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${getPublicUrl('why-choose-us.jpg')})` }}></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 via-blue-700/90 to-purple-600/90"></div>
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
