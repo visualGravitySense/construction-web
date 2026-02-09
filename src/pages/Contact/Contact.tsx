@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Building2, Award, TrendingUp, Clock, Star, Shield, Sparkles, Zap, MessageSquare, CheckCircle, ArrowRight } from 'lucide-react';
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { getPublicUrl } from "@/lib/utils"
 import './Contact.css';
 
 const Contact = () => {
@@ -196,7 +197,7 @@ const Contact = () => {
         <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-300/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-300/10 rounded-full blur-3xl"></div>
         
-        <div className="absolute inset-0 bg-[url('/pattern-1.jpg')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: `url(${getPublicUrl('pattern-1.jpg')})` }}></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 via-blue-700/90 to-purple-600/90"></div>
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
