@@ -75,7 +75,7 @@ const ContactSection = () => {
       {/* Фоновый паттерн */}
       <div className="absolute inset-0">
         <img 
-          src="/pattern-1.jpg" 
+          src={`${import.meta.env.BASE_URL}pattern-1.jpg`} 
           alt="Pattern background"
           className="w-full h-full object-cover"
         />

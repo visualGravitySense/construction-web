@@ -9,9 +9,12 @@ import Projects from './pages/Projects/Projects';
 import Contact from './pages/Contact/Contact';
 import './App.css';
 
+// Base path для GitHub Pages (напр. /construction-web); локально — /
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || undefined;
+
 function App() {
   return (
-    <Router>
+    <Router basename={basename}>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Header />

@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import './Hero.css'
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -35,19 +37,19 @@ const Hero = () => {
       welcomeText: "TERE TULEMAST ECOBETONI",
       heading: "EHITAME PAREMA TULEVIKU",
       description: "Anname endast iga päev maksimumi, püüeldes täiusliku tulemuse ja kõrge kvaliteedi poole, et ületada ka kõige nõudlikuma kliendi ootused.",
-      video: "/motion-4.mp4"
+      video: `${baseUrl}motion-4.mp4`
     },
     {
       welcomeText: "TERE TULEMAST ECOBETONI",
       heading: "EHITAME PAREMA TULEVIKU",
       description: "Anname endast iga päev maksimumi, püüeldes täiusliku tulemuse ja kõrge kvaliteedi poole, et ületada ka kõige nõudlikuma kliendi ootused.",
-      video: "/motion-2.mp4"
+      video: `${baseUrl}motion-2.mp4`
     },
     {
       welcomeText: "TERE TULEMAST ECOBETONI",
       heading: "EHITAME PAREMA TULEVIKU",
       description: "Anname endast iga päev maksimumi, püüeldes täiusliku tulemuse ja kõrge kvaliteedi poole, et ületada ka kõige nõudlikuma kliendi ootused.",
-      video: "/motion-3.mp4"
+      video: `${baseUrl}motion-3.mp4`
     }
   ];
 
